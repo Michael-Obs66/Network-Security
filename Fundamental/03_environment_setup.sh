@@ -23,7 +23,7 @@ echo "Current IP: $current_ip"
 
 #set up environment
 
-pentest_target="hertz.com" #fill with your target"
+pentest_target="" #fill with your target"
 pentest_type="network"
 output_dir="./results"
 log_level="info"
