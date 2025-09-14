@@ -1,25 +1,34 @@
-#!/bin/bash
-
+#!/usr/bin/env bas
 #variable declaration
-target_ip="192.168.1.100" #change the target for what you want
-port=80
 scan_type="TCP"
 
-#String Concatenation
-full_target="${target_ip}:${port}"
-log_message="Scanning ${full_target}:Using ${scan_type}"
+#Arrays for multiple targets
+targets=("192.168.1.100" "192.168.1.102" "192.168.1.103") #this targets are unreal, you can change for yours targets
+ports=(21 22 23 24 25 53 80 443 993 993)
 
-#numeric Operation
-total_port=$((port + 21 + 443 + 8080))
-echo "Total Ports to Scan : $total_port"
+#Display summary
+echo "=========Summary===================="
+echo "Scan Summary"
+echo "Targets           : ${targets[@]}"
+echo "Ports             : ${ports[@]}"
+echo "Total Targets     : ${#targets[@]}"
+echo "Total Ports       : ${#ports[@]}"
+echo "Scan Type         : $scan_type"
+echo "===================================="
 
-#arrays for multiple target
-targets= "192.168.1.100" "192.168.1.182" "192.168.1.183"
-ports= ( 21 22 23 25 53 80 110 443 993 995 )
+#scan loop using netcat for example
+for t in "${targets[@]}"; do
+  echo "==Scanning $t=="
+  for p in "${ports[@]}"; do
+    if nc -z -w1 "$t" "$p" >/dev/null 2>&1; then
+      printf "%s:%-5s %s\n" "$t" "$p" "open"
+    else
+      printf "%s:%-5s %s\n" "$t" "$p" "closed"
+    fi
+  done
+  echo ""
 
-echo "Targets : ${targets[@]}"
-echo "Ports : ${ports[@]}"
-echo "Total Targets : ${#targets[@]}"
+
 
 
 
