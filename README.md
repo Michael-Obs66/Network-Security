@@ -67,13 +67,6 @@ bash ./scripts/network_scan.sh
 
 ---
 
-## 🔬 Lab Exercises
-💻 **Network Scanning** → Using `nmap` to discover hosts & services  
-📡 **Traffic Analysis** → Capturing packets with Wireshark/tcpdump  
-🛡 **Firewall Setup** → Configuring iptables or ufw  
-🔎 **Vulnerability Assessment** → Identifying weaknesses in test environments  
-⚔ **Incident Response** → Simulating detection & mitigation procedures  
-
 > Feel free to add your own labs and expand the repository 🚀  
 
 ---
