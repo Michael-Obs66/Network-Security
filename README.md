@@ -2,9 +2,7 @@
 
 [![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)  
 [![Nmap](https://img.shields.io/badge/Tool-Nmap-blue.svg)](https://nmap.org/)  
-[![Wireshark](https://img.shields.io/badge/Tool-Wireshark-007ACC.svg)](https://www.wireshark.org/)  
-[![TryHackMe](https://img.shields.io/badge/TryHackMe-Labs-red.svg)](https://tryhackme.com/)  
-[![HackTheBox](https://img.shields.io/badge/HackTheBox-Challenges-brightgreen.svg)](https://www.hackthebox.com/)  
+
 
 📘 **Welcome to Network Security!**  
 This repository is designed for **learning and experimenting with network security** through shell scripts and hands-on labs.  
